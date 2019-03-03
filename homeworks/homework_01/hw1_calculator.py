@@ -3,13 +3,13 @@
 
 
 def calculator(x, y, operator):
-    '''
+    """
     Простенький калькулятор в прямом смысле. Работает c числами
     :param x: первый агрумент
     :param y: второй аргумент
     :param operator: 4 оператора: plus, minus, mult, divide
     :return: результат операции или None, если операция не выполнима
-    '''
+    """
     if operator in ['plus', 'minus', 'mult', 'divide'] and not isinstance(x, str) \
     and not isinstance(y, str):
         print(type(x))

@@ -3,12 +3,12 @@
 
 
 def invert_dict(source_dict):
-    '''
+    """
     Функция которая разворачивает словарь, т.е.
     каждому значению ставит в соответствие ключ.
     :param source_dict: dict
     :return: new_dict: dict
-    '''
+    """
     new_dict = {}
     for key in source_dict:
         if isinstance(source_dict[key], list) or isinstance(source_dict[key], tuple) or \
@@ -33,7 +33,6 @@ def invert_dict(source_dict):
                 else:
                     new_dict[val].append(key)
     return new_dict
-    raise NotImplementedError
 
 
 def merge(lstlst):
