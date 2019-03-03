@@ -15,8 +15,8 @@ def advanced_calculator(input_string):
     """
     re.sub(' ', '', input_string)
     try:
-        if not (not len(re.findall("[^0-9, (, ), +, \-, \*, /,., \t]", \
-                                   input_string)) and not len(
+        if not (not len(re.findall("[^0-9, (, ), +, \-, \*, /,., \t]",
+                input_string)) and not len(
                 re.findall("(\*\*)+", input_string))) or len(
                 re.findall("\,", input_string)) != 0:
             return None

@@ -39,7 +39,8 @@ def invert_dict(source_dict):
 def merge(lstlst):
     all = []
     for lst in lstlst:
-        if isinstance(lst, list) or isinstance(lst, tuple) or isinstance(lst, set):
+        if isinstance(lst, list) or isinstance(
+                    lst, tuple) or isinstance(lst, set):
             all = all + merge(lst)
         else:
             all.append(lst)
