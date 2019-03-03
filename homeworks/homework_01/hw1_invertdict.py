@@ -11,7 +11,8 @@ def invert_dict(source_dict):
     """
     new_dict = {}
     for key in source_dict:
-        if isinstance(source_dict[key], list) or isinstance(source_dict[key], tuple) or \
+        if isinstance(source_dict[key], list) or isinstance(
+                    source_dict[key], tuple) or \
                 isinstance(source_dict[key], set):
             for val in merge(source_dict[key]):
                 if new_dict.get(val, 'No') is 'No':
