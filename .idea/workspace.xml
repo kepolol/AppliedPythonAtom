@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e49f3c3e-ac7c-4408-8831-2e8186d4035d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/homeworks/homework_01/hw1_arrsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/homeworks/homework_01/hw1_arrsearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homeworks/homework_01/hw1_brseq.py" beforeDir="false" afterPath="$PROJECT_DIR$/homeworks/homework_01/hw1_brseq.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homeworks/homework_01/hw1_calcadv.py" beforeDir="false" afterPath="$PROJECT_DIR$/homeworks/homework_01/hw1_calcadv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homeworks/homework_01/hw1_calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/homeworks/homework_01/hw1_calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homeworks/homework_01/hw1_det.py" beforeDir="false" afterPath="$PROJECT_DIR$/homeworks/homework_01/hw1_det.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homeworks/homework_01/hw1_invertdict.py" beforeDir="false" afterPath="$PROJECT_DIR$/homeworks/homework_01/hw1_invertdict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homeworks/homework_01/hw1_invertint.py" beforeDir="false" afterPath="$PROJECT_DIR$/homeworks/homework_01/hw1_invertint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homeworks/homework_01/hw1_palindrom.py" beforeDir="false" afterPath="$PROJECT_DIR$/homeworks/homework_01/hw1_palindrom.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lectures/lecture_01/notebooks/Lecture_01.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/lectures/lecture_01/notebooks/Lecture_01.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="e49f3c3e-ac7c-4408-8831-2e8186d4035d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="67" />
     <option name="y" value="27" />
     <option name="width" value="650" />
@@ -179,7 +169,7 @@
       <workItem from="1551431889744" duration="9000" />
       <workItem from="1551431955437" duration="172000" />
       <workItem from="1551432149358" duration="6369000" />
-      <workItem from="1551519525124" duration="20807000" />
+      <workItem from="1551519525124" duration="21384000" />
     </task>
     <task id="LOCAL-00001" summary="lec1">
       <created>1551432223635</created>
@@ -192,7 +182,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27506000" />
+    <option name="totallyTimeSpent" value="28083000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -204,7 +194,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="27" width="1299" height="741" extended-state="6" />
+    <frame x="67" y="27" width="1299" height="741" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2124105" />
