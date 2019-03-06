@@ -13,19 +13,20 @@ def find_indices(input_list, n):
     :param n: целевая сумма
     :return: tuple из двух индексов или None
     """
-    answer = 0
+    input_dict = {}
     a = 0
+    answer = 0
     for i in input_list:
-        num = n - i
-        b = 0
-        for j in input_list[a + 1::]:
-            if j != num:
-                b += 1
-                continue
-            else:
-                answer = 1
-                return tuple([a, b + a + 1])
+        input_dict[i] = a
         a += 1
+    for key in input_dict:
+        num = n - key
+        if input_dict.get(num, 'num is absent') != 'num is absent' and \
+                input_dict[key] != input_dict[num]:
+            answer = 1
+            return tuple([input_dict[key], input_dict[num]])
+        else:
+            continue
     if answer == 0:
         return None
     raise NotImplementedError
