@@ -14,7 +14,7 @@ def advanced_calculator(input_string):
     :param input_string: строка, содержащая выражение
     :return: результат выполнение операции, если строка валидная - иначе None
     '''
-    if false_str(input_string) == None:
+    if false_str(input_string) is None:
         return None
     try:
         return polish2num(to_polish(reformat_string(input_string)))
