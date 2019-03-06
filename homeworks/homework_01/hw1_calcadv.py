@@ -3,7 +3,6 @@
 
 
 import re
-from pyrpn import Rpn
 
 
 def advanced_calculator(input_string):
@@ -18,7 +17,7 @@ def advanced_calculator(input_string):
     if false_str(input_string) == None:
         return None
     try:
-        return Rpn(to_polish(reformat_string(input_string))).solve()
+        return polish2num(to_polish(reformat_string(input_string)))
     except IndexError:
         return None
 
@@ -32,7 +31,9 @@ def false_str(string):
     if len(re.findall("r(^[0-9, (, ), +, \-, \*, /,., \t])|("
                       "(\*\*)+)|([\[,\]])|(\,) ", string))!= 0:
         return None
-    elif len(re.findall("((\(\))+)|([A-Za-z])|([=, \n])", string)) != 0:
+    elif len(re.findall("((\(\))+)|([A-Za-z])|([=, \n])|("
+                        "[\-, \+]+\s?[\*, \/]+)|("
+                        "[\*, \/]+\s?[\-, \+]+\s+)", string)) != 0:
         return None
     elif len(re.findall("[0-9]", string)) == 0:
         return None
@@ -97,4 +98,27 @@ def to_polish(exp):
             stack.append(i)
     while stack:
         polish.append(stack.pop())
-    return " ".join([str(i) for i in polish])
+    return polish
+
+
+def polish2num(polish):
+    stack = []
+    for i in polish:
+        if type(i) is float:
+            stack.append(i)
+        else:
+            if i == '-' and len(stack) == 1:
+                val = stack.pop()
+                stack.append(-val)
+            else:
+                val1 = stack.pop()
+                val2 = stack.pop()
+                if i == '+':
+                    stack.append(val2 + val1)
+                elif i == '-':
+                    stack.append(val2 - val1)
+                elif i == '*':
+                    stack.append(val2 * val1)
+                elif i == '/':
+                    stack.append(val2 / val1)
+    return stack.pop()
