@@ -29,7 +29,7 @@ def false_str(string):
     string = re.sub(' ', '', string)
     string = string.replace("\t", "")
     if len(re.findall("r(^[0-9, (, ), +, \-, \*, /,., \t])|("
-                      "(\*\*)+)|([\[,\]])|(\,) ", string))!= 0:
+                      "(\*\*)+)|([\[,\]])|(\,) ", string)) != 0:
         return None
     elif len(re.findall("((\(\))+)|([A-Za-z])|([=, \n])|("
                         "[\-, \+]+\s?[\*, \/]+)|("
