@@ -27,3 +27,9 @@ if __name__ == '__main__':
         print('Формат не валиден')
     except AttributeError:
         print('Формат не валиден')
+    except IndexError:
+        print('Формат не валиден')
+    if data[1] == 1:
+        table_builder(data[0])
+    else:
+        table_builder(json2lists(data[0]))
