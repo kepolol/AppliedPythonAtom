@@ -52,10 +52,11 @@ class VKPoster:
         :param followee_user_id: id пользователя. Число.
         :return: ничего
         """
-        if follower_user_id in self.folower_list.keys():
-            self.folower_list[follower_user_id].append(followee_user_id)
-        else:
-            self.folower_list[follower_user_id] = [followee_user_id]
+        if followee_user_id != follower_user_id:
+            if follower_user_id in self.folower_list.keys():
+                self.folower_list[follower_user_id].append(followee_user_id)
+            else:
+                self.folower_list[follower_user_id] = [followee_user_id]
 
     def get_recent_posts(self, user_id: int, k: int) -> list:
         """

@@ -15,7 +15,7 @@ class Heap:
         :return:
         """
         self.array.append(elem_with_priority)
-        self.sift_up(len(self.array) - 1)
+        self.build_heap()
 
     def build_heap(self):
         """
