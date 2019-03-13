@@ -2,7 +2,7 @@
 # coding: utf-8
 
 
-from homeworks.homework_02.heap import MaxHeap, Heap
+from homeworks.homework_02.heap import MaxHeap
 from homeworks.homework_02.fastmerger import FastSortedListMerger
 
 
