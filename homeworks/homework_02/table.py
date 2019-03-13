@@ -10,8 +10,7 @@ from table_builder import table_builder
 # Ваши импорты
 
 if __name__ == '__main__':
-    #filename = sys.argv[1]
-    filename = 'files/posts-utf8.tsv'
+    filename = sys.argv[1]
 
     # Ваш код
 try:
