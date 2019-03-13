@@ -2,7 +2,7 @@
 # coding: utf-8
 
 
-from homeworks.homework_02.other_methods import columns_len
+from other_methods import columns_len
 
 
 def table_builder(data):
@@ -35,3 +35,4 @@ def table_builder(data):
                 col_len[2] - len(str(lists[2])) + 2) * ' ' +
                 '|', (col_len[3] - len(str(
                     lists[3])) + 2) * ' ', str(lists[3]), 2 * ' ' + '|']))
+    print(hyphens)
