@@ -13,12 +13,11 @@ if __name__ == '__main__':
     filename = sys.argv[1]
 
     # Ваш код
+    checker = False
     try:
         data = read_json_data(filename, def_enc_method(filename))
-        if data[1] == 1:
-            table_builder(data[0])
-        else:
-            table_builder(json2lists(data[0]))
+        k = data[0][0]
+        checker = True
     except FileNotFoundError:
         print('Файл не валиден')
     except UnicodeError:
@@ -29,7 +28,8 @@ if __name__ == '__main__':
         print('Формат не валиден')
     except IndexError:
         print('Формат не валиден')
-    if data[1] == 1:
-        table_builder(data[0])
-    else:
-        table_builder(json2lists(data[0]))
+    if checker:
+        if data[1] == 1:
+            table_builder(data[0])
+        else:
+            table_builder(json2lists(data[0]))
