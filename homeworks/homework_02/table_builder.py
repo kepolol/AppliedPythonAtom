@@ -19,7 +19,7 @@ def table_builder(data):
                     str(single_string))) / 2) + 2) * ' ', '|'])
         stri = ''.join([stri, (int((col_len[-1] - len(
                     str(lists[-1])) + 1) / 2) + 2) * ' ', str(
-            lists[3]), (int((col_len[-1] - len(
+            lists[-1]), (int((col_len[-1] - len(
                 str(lists[-1])) + 1) / 2) + 2) * ' ' + '|'])
         print(stri)
     for lists in data[1:]:
