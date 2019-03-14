@@ -16,6 +16,12 @@ if __name__ == '__main__':
     checker = False
     try:
         data = read_json_data(filename, def_enc_method(filename))
+        max_len = max([len(i) for i in data])
+        for i in data:
+            if len(i) != max_len:
+                print('Формат не валиден')
+                break
+
         checker = True
     except FileNotFoundError:
         print('Файл не валиден')
