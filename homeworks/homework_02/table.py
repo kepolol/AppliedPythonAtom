@@ -16,7 +16,6 @@ if __name__ == '__main__':
     checker = False
     try:
         data = read_json_data(filename, def_enc_method(filename))
-        k = data[0][0]
         checker = True
     except FileNotFoundError:
         print('Файл не валиден')
