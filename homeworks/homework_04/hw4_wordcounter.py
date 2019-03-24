@@ -48,4 +48,3 @@ def dict_count(path_to_dir, our_dict, filename):
     our_dict[filename] = count
     our_dict['total'] += count
     return
-
