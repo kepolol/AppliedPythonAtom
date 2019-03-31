@@ -1,8 +1,7 @@
 import sys
 import requests
 from bs4 import BeautifulSoup
-import re
-from multiprocessing.dummy import Pool
+from concurrent.futures import ProcessPoolExecutor
 from functools import partial
 import pandas as pd
 
@@ -27,8 +26,11 @@ if __name__ == '__main__':
     # Ваш код
     our_dict = {}
     func = partial(link_parser, our_dict)
-    pool = Pool(len(links))
-    pool.map(func, links)
+    # Асинхронность реализуется за счет класса ProcessPoolExecutor
+    # https://docs.python.org/3.6/library/concurrent.futures.html
+    with ProcessPoolExecutor(max_workers=len(links)) as executor:
+        for i in executor.map(func, links):
+            our_dict = {**our_dict, **i}
     df = pd.DataFrame([[i[1], i[0], our_dict[i]] for i in our_dict])
     df.sort_values(by=[df.columns[0], df.columns[2], df.columns[1]], ascending=False, inplace=True)
     df.to_csv('top_user_comments.csv', index=False, header=False)
