@@ -30,5 +30,5 @@ if __name__ == '__main__':
     pool = Pool(len(links))
     pool.map(func, links)
     df = pd.DataFrame([[i[1], i[0], our_dict[i]] for i in our_dict])
-    df.sort_values(by=[df.columns[2], df.columns[1]], ascending=False, inplace=True)
+    df.sort_values(by=[df.columns[0], df.columns[2], df.columns[1]], ascending=False, inplace=True)
     df.to_csv('top_user_comments.csv', index=False, header=False)
